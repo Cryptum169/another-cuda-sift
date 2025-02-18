@@ -1,0 +1,10 @@
+# In .bazelrc
+build --repo_env=CC=gcc-10
+build --repo_env=CXX=g++-10
+
+build --cxxopt=-std=c++2a
+build --cxxopt=-O3
+
+build --@rules_cuda//cuda:copts=-std=c++20
+build --@rules_cuda//cuda:host_copts=-std=c++20
+build --@rules_cuda//cuda:archs=compute_61:compute_61,sm_61
