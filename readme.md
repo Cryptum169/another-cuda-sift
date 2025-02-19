@@ -1,4 +1,4 @@
-# Another CUDA SIFT
+# Ancu SIFT
 
 An(other)cu(DA) Sift is a CUDA implementation (among many: [PopSift](https://github.com/alicevision/popsift), [cuSIFT](https://github.com/danielsuo/cuSIFT), etc.) of the Scale Invariant Feature Transform (SIFT) algorithm that detects and describes local features in images.
 
@@ -42,7 +42,22 @@ $ make install -j
 ```
 
 ### Use as third party package
-<!-- TODO -->
+
+```sh
+# In WORKSPACE
+http_archive(
+    name = "another-cuda-sift",
+    urls = ["https://github.com/Cryptum169/another-cuda-sift/archive/v0.0.1.tar.gz"],
+    strip_prefix = "another-cuda-sift-0.0.1",
+)
+
+# In BUILD
+cc_binary(
+    name = "user_program",
+    srcs = ["user_program.cc"],
+    deps = ["@another-cuda-sift//sift_cuda:interface"],
+)
+```
 
 ## Usage
 

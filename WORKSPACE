@@ -1,4 +1,4 @@
-workspace(name = "cuda-playground")
+workspace(name = "another-cuda-sift")
 
 new_local_repository(
     name = "opencv",
