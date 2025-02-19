@@ -1,7 +1,7 @@
 load("@rules_cuda//cuda:defs.bzl", "cuda_binary")
 
 cc_binary(
-    name = "allocation_example",
+    name = "detection_example",
     deps = [
         "//sift_cuda/interface:interface",
         "//cvUtils:opencv_utils",
@@ -9,12 +9,12 @@ cc_binary(
         "@cli11//:cli11",
     ],
     srcs = [
-        "allocation_example.cc"
+        "detection_example.cc"
     ],
 )
 
 cuda_binary(
-    name = "detection_example",
+    name = "extract_and_match_example",
     deps = [
         "//sift_cuda/interface:interface",
         "//sift_cuda/sift_func:sift_func",
@@ -23,7 +23,7 @@ cuda_binary(
         "@cli11//:cli11",
     ],
     srcs = [
-        "detection_example.cc"
+        "extract_and_match_example.cc"
     ],
 )
 
