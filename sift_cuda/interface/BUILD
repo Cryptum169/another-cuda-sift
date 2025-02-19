@@ -18,4 +18,5 @@ cuda_library(
         "//sift_cuda/sift_func:sift_func",
     ],
     visibility = ["//visibility:public"],
+    copts = ["-std=c++20"],
 )

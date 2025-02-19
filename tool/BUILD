@@ -11,6 +11,7 @@ cc_binary(
     srcs = [
         "detection_example.cc"
     ],
+    copts = ["-std=c++20"],
 )
 
 cuda_binary(
@@ -25,6 +26,7 @@ cuda_binary(
     srcs = [
         "extract_and_match_example.cc"
     ],
+    copts = ["-std=c++20"],
 )
 
 cuda_binary(
@@ -40,5 +42,6 @@ cuda_binary(
     srcs = [
         "perf.cu"
     ],
-    visibility = ["//visibility:public"]
+    visibility = ["//visibility:public"],
+    copts = ["-std=c++20"],
 )

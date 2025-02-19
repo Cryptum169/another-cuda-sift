@@ -19,4 +19,5 @@ cuda_library(
         "DeserializationUtils.cuh",
     ],
     visibility = ["//visibility:public"],
+    copts = ["-std=c++20"],
 )

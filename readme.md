@@ -44,18 +44,19 @@ $ make install -j
 ### Use as third party package
 
 ```sh
-# In WORKSPACE
-http_archive(
-    name = "another-cuda-sift",
-    urls = ["https://github.com/Cryptum169/another-cuda-sift/archive/v0.0.1.tar.gz"],
-    strip_prefix = "another-cuda-sift-0.0.1",
+# In MODULE.bazel
+bazel_dep(name = "another-cuda-sift", version = "")
+git_override(
+    module_name = "another-cuda-sift",
+    remote = "https://github.com/Cryptum169/another-cuda-sift.git",
+    commit = "commit-sha" #
 )
 
 # In BUILD
 cc_binary(
     name = "user_program",
     srcs = ["user_program.cc"],
-    deps = ["@another-cuda-sift//sift_cuda:interface"],
+    deps = ["@another-cuda-sift//sift_cuda/interface:interface"],
 )
 ```
 

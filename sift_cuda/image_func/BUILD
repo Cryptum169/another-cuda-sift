@@ -20,5 +20,6 @@ cuda_library(
     deps = [
         "//sift_cuda/types:types",
     ],
+    copts = ["-std=c++20"],
     visibility = ["//visibility:public"],
 )

@@ -15,4 +15,5 @@ cuda_library(
         "KeyPoint.cu",
     ],
     visibility = ["//visibility:public"],
+    copts = ["-std=c++20"],
 )

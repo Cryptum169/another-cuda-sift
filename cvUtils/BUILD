@@ -14,4 +14,5 @@ cuda_library(
         "@opencv//:opencv"
     ],
     visibility = ["//visibility:public"],
+    copts = ["-std=c++20"],
 )
