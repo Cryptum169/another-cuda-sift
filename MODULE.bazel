@@ -5,6 +5,11 @@
 # For more details, please check https://github.com/bazelbuild/bazel/issues/18958
 ###############################################################################
 
+module(
+    name = "another-cuda-sift",  # Make sure this matches what you're using in git_override
+    version = "0.0.1",
+)
+
 bazel_dep(name = "rules_cuda", version = "0.2.3")
 
 cuda = use_extension("@rules_cuda//cuda:extensions.bzl", "toolchain")
