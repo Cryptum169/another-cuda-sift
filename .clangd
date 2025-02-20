@@ -1,0 +1,8 @@
+CompileFlags:
+    Add: 
+        - --cuda-gpu-arch=sm_75
+        - --cuda-path=/usr/local/cuda
+        - -L/usr/local/cuda/lib64
+        - -I/usr/local/cuda/include
+        - -xcuda
+        - -std=c++20
