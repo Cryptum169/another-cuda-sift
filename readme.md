@@ -1,6 +1,6 @@
-# Ancu SIFT
+# Another CUDA SIFT
 
-An(other)cu(DA) Sift is a CUDA implementation (among many: [PopSift](https://github.com/alicevision/popsift), [cuSIFT](https://github.com/danielsuo/cuSIFT), etc.) of the Scale Invariant Feature Transform (SIFT) algorithm that detects and describes local features in images.
+An(other) cu(DA) Sift is a CUDA implementation (among many: [PopSift](https://github.com/alicevision/popsift), [cuSIFT](https://github.com/danielsuo/cuSIFT), etc.) of the Scale Invariant Feature Transform (SIFT) algorithm that detects and describes local features in images.
 
 This implementation closely follows the version by opencv, structured largely through the same flow, achieving real-time results without going through extensive optimizations and keeping the code rather readable. 
 
